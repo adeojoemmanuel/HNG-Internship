@@ -15,12 +15,18 @@
 	  
 	  $IO = new IOhandler;
 
+	  echo "<table>";
+	  echo "<tr><th>firstname</th><th>lastname</th><th>self description</th></tr>";
 	  $datas = $IO->getAll('_userdatas');
-	  foreach ($datas as $user) {
-	    echo "firstname  = ". $user['_firstname'] . '<br />';
-	    echo "lastname  = ". $user['_lastname'] . '<br />';
-	    echo "self description  = ". $user['_selfdec'] . '<br />';
+	  foreach ($datas as $row) {
+	    echo "<tr>";
+	    echo "<td>".$row['_firstname']."</td>";
+	    echo "<td>".$row['_lastname']."</td>";
+	    echo "<td>".$row['_selfdec']."</td>";
+	    echo "</tr>";
 	  }
+
+	  echo "</table>";
 	?>
 
 <h2>reverse text algorithm php</h2>
