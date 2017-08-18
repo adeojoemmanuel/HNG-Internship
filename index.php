@@ -9,7 +9,7 @@
 	<?php
 	  session_start();
 	  function load($class){
-	    include('iohandler/'. $class .".php");
+	    include('handler/'. $class .".php");
 	  }
 	  load('IOhander');
 	  
